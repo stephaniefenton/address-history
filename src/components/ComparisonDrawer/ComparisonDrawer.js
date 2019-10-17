@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { getEvents } from '../../api';
 import ComparisonSection from './ComparisonSection';
-import { Paper } from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
     drawer: {
@@ -91,7 +91,7 @@ const ComparisonDrawer = (props) => {
                                 <Typography variant="h6" component="span">Event Type: {event.type}</Typography>
                                 { Object.keys(event.payload).map(eventKey => {
                                     return (
-                                        <Typography variant="body2">
+                                        <Typography variant="body2" key={`${event.id}-${event.payload[eventKey]}`}>
                                             {eventKey}: {event.payload[eventKey]}
                                         </Typography>
                                     );

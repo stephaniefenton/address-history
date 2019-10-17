@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardContent } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import AddressText from '../AddressCard/AddressText';
 import intersection from 'lodash.intersection';
 import { makeStyles } from '@material-ui/styles';
